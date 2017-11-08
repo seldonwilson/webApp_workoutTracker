@@ -1,0 +1,75 @@
+{{{css}}}
+
+<h1>Your Workout Tracker</h1>
+
+<form id="newExerciseInfo">
+<fieldset>
+   <legend>Add an exercise</legend>
+      <label for="exerciseName">Exercise Name:
+         <input type="text" id="exerciseName" placeholder="required"></label>
+      <br>
+
+      <label for=exerciseWeight">Weight:
+         <input type="number" id="exerciseWeight">
+         <select id="exerciseUnits">
+            <option value="0">kgs</option>
+            <option value="1" selected>lbs</option>
+         </select></label>
+      <br>
+
+      <label for="exerciseReps">Reps:
+         <input type="number" id="exerciseReps" min="1"></label>
+      <br>
+
+      <label for="exerciseDate">Date:
+         <input type="date" id="exerciseDate"></label>
+      <br>
+
+      <input type="button" id="addExercise" value="Add Exercise">
+</fieldset>
+</form>
+
+<br>
+
+<table id="exerciseTable">
+   <tr>
+      <th>Date</th>
+      <th>Exercise Name</th>
+      <th>Weight</th>
+      <th>Units</th>
+      <th>Reps</th>
+   </tr>
+
+{{#if exercises}}
+   {{#each exercises}}
+   <tr id="{{this.id}}">
+      <td>{{this.date}}</td>
+      <td>{{this.name}}</td>
+      <td>{{this.weight}}</td>
+      <td>{{this.units}}</td>
+      <td>{{this.reps}}</td>
+      <td><input type="button" value="Edit" class="edit"></td>
+      <td><input type="button" value="Delete" class="delete"></td>
+   </tr>
+   {{/each}}
+{{/if}}
+</table>
+      
+<!-- <tr style="border-colapse:collapse">
+      <td>8/6/17</td>
+      <td>Tricep Curls</td>
+      <td>50</td>
+      <td>lbs</td>
+      <td>15</td>
+      <td style="border-colapse:collapse"><input type="button" value="Edit"></td>
+      <td style="border-colapse:collapse"><input type="button" value="Delete"></td>
+-->
+
+<p>Here's the loaded JSON values</p>
+{{table}}
+
+
+{{{script}}}
+
+
+

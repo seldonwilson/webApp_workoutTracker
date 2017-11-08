@@ -1,0 +1,38 @@
+{{{css}}}
+
+<h1>Update Your Workout</h1>
+
+<form id="updatedExerciseInfo">
+<fieldset>
+   <legend>Edit your info</legend>
+      <label for="exerciseName">Exercise Name:
+         <input type="text" id="exerciseName" value="{{name}}"></label>
+      <br>
+
+      <label for=exerciseWeight">Weight:
+         <input type="number" id="exerciseWeight" value="{{weight}}">
+         <select id="exerciseUnits">
+         {{#if isPounds}}
+            <option value="0">kgs</option>
+            <option value="1" selected>lbs</option>
+         {{else}}
+            <option value="0" selected>kgs</option>
+            <option value="1">lbs</option>
+         {{/if}}
+         </select></label>
+      <br>
+
+      <label for="exerciseReps">Reps:
+         <input type="number" id="exerciseReps" min="1" value="{{reps}}"></label>
+      <br>
+
+      <label for="exerciseDate">Date:
+         <input type="date" id="exerciseDate" value="{{date}}"></label>
+      <br>
+
+      <input type="button" id="{{id}}" name="updateExercise" value="Update Exercise">
+</fieldset>
+</form>
+
+
+{{{script}}}
