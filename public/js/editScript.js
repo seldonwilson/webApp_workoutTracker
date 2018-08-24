@@ -22,8 +22,8 @@ document.addEventListener("DOMContentLoaded", function() {
       var lbs    = document.getElementById("exerciseUnits").value;
    
       var queryString = "?id="     + id     + "&name=" + name +
-   	    				"&weight=" + weight + "&reps=" + reps +
-   					    "&date="   + date   + "&lbs="  + lbs;
+                        "&weight=" + weight + "&reps=" + reps +
+                        "&date="   + date   + "&lbs="  + lbs;
 
       var req = new XMLHttpRequest();
       req.open("GET", "/safe-update" + queryString, true);
