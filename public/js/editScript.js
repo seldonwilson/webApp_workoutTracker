@@ -21,9 +21,9 @@ document.addEventListener("DOMContentLoaded", function() {
       var date   = document.getElementById("exerciseDate").value;
       var lbs    = document.getElementById("exerciseUnits").value;
    
-      var queryString = "?id="     + id     + "&name=" + name +
-                        "&weight=" + weight + "&reps=" + reps +
-                        "&date="   + date   + "&lbs="  + lbs;
+      var queryString =   "?id="     + id     + "&name=" + name
+                        + "&weight=" + weight + "&reps=" + reps
+                        + "&date="   + date   + "&lbs="  + lbs;
 
       var req = new XMLHttpRequest();
       req.open("GET", "/safe-update" + queryString, true);
